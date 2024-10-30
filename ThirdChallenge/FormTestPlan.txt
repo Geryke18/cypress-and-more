@@ -1,0 +1,44 @@
+Feature: Setting the number of tentacles with a form
+
+ Background:
+  Given our form with an empty input field
+
+ Scenario: Not a number
+  When the user types "twelve" into the input field
+  And clicks on the Send button
+  Then the user gets an "Error" message
+
+ Scenario: Not an integer with coma
+  When the user types 10,5 into the input field
+  And clicks on the Send button
+  Then the user gets an "Error" message
+
+ Scenario: Not an integer with dot
+  When the user types 10.5 into the input field
+  And clicks on the Send button
+  Then the user gets an "Error" message
+
+ Scenario: Negative number
+  When the user types -45 into the input field
+  And clicks on the Send button
+  Then the user gets an "Error" message
+
+ Scenario: Under the minimum
+  When the user types 9 into the input field
+  And clicks on the Send button
+  Then the user gets an "Error" message
+
+ Scenario: Above the maximum
+  When the user types 101 into the input field
+  And clicks on the Send button
+  Then the user gets an "Error" message
+
+ Scenario: Minimum
+  When the user types 10 into the input field
+  And clicks on the Send button
+  Then the user gets a "Success" message
+
+ Scenario: Maximum
+  When the user types 100 into the input field
+  And clicks on the Send button
+  Then the user gets a "Success" message

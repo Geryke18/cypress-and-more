@@ -1,0 +1,31 @@
+Bug Report
+
+Summary:	User can not rate with 10 star on IMDB
+
+Description:	When I select a movie from Top Box Office and try to rate it with 10 star,
+		the final Rate button is disabled, so I can not submit my ratings.
+
+Reproduction:	- Go to https://www.imdb.com/
+		- Navigate in the Menu(top-left) to Movies -> Top Box Office
+		- Select a movie
+		- Click on the blue "Rate" button
+			(On big screen: top-right from the trailer
+			On little screen: under the description)
+		- Click on the most right little star to give a 10
+		--> Rate button is not enabled
+
+Project:	IMDB
+Parent:		IMDB-3654 - Refactoring rating system
+Squad:		FrontEndTeam2
+Assignee:	John Smith(Dev)
+Bug Type:	Functionality
+Product:	IMDB Website
+Component:	IMDB UI
+Affects Branch:	Main
+Found Buildnum:	265.5678
+Regression:	True
+Affects Autotest:First Challenge
+Last Good V.:	256.5676
+Found by:	Internal
+Platform:	Win/Mac
+Browser:	Chrome/Firefox
