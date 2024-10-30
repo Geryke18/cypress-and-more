@@ -54,7 +54,7 @@ describe('First Challenge', () => {
   })
 
   if (Cypress.browser.family === 'chromium') { // realPress only supports chromium
-    it.only('finds the 1st celebrity born 40 years ago', () => {
+    it('finds the 1st celebrity born 40 years ago', () => {
       cy.navigateMenu('Celebs', 'Born Today');
       cy.get('.ipc-chip-list__scroller').click(); // close filter
       cy.get('[data-testid="accordion-item-birthDateAccordion"] > .ipc-accordion__item__title').click();
