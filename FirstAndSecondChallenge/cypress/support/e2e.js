@@ -18,7 +18,6 @@ import './commands'
 import "cypress-real-events";
 
 // Alternatively you can use CommonJS syntax:
-require('cypress-plugin-tab')
 
 Cypress.on('uncaught:exception', () => {
     // returning false here prevents Cypress from
