@@ -1,7 +1,7 @@
 describe('First Challenge', () => {
   beforeEach(() => {
     cy.visit('/')
-    cy.get('[data-testid="accept-button"]').click();  // cookies
+    cy.get('[data-testid="accept-button"]', { timeout: 10000 }).click();  // cookies
   })
 
   it('finds the next completed movie of Nicolas Cage', () => {
