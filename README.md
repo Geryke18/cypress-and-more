@@ -13,4 +13,4 @@ Run the tests with:
 ```
 npx cypress run
 ```
-(First time it will ask permission to run, so let it run)
+(It will ask permission to run the first time, so let it run)
